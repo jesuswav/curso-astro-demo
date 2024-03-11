@@ -1,5 +1,6 @@
 ---
 import HeaderButton from './HeaderButton.astro'
+import { Counter } from './Counter.jsx'
 console.log('javascript')
 ---
 
@@ -13,10 +14,12 @@ console.log('javascript')
     </p>
   </div>
 
+  <Counter transition:persist client:visible />
+
   <nav
     class='flex flex-col items-center justify-between w-full text-center md:flex-row'
   >
-    <HeaderButton class='text-white' href='/'>
+    <HeaderButton class='text-white' link=''>
       <svg
         slot='before'
         width='44'
@@ -37,7 +40,7 @@ console.log('javascript')
       </svg>
       Últimos lanzamientos de SpaceX
     </HeaderButton>
-    <HeaderButton class='text-white' href='/about'>
+    <HeaderButton class='text-white' link='about'>
       <svg
         slot='before'
         width='44'
@@ -56,7 +59,7 @@ console.log('javascript')
       </svg>
       Sobre el proyecto
     </HeaderButton>
-    <HeaderButton class='text-white' href='/oldest'>
+    <HeaderButton class='text-white' link='oldest'>
       <svg
         slot='before'
         width='44'
